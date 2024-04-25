@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "7e08ad14-20d2-4a23-8470-87082ab4795c",
+		"name": "ks_micro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33307147"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "đăng nhập",
+					"item": [
+						{
+							"name": "Đăng nhập customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"ducmanhphungducmanh@gmail.com\",\r\n    \"password\":\"63866\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/login/customer",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"login",
+										"customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Đăng nhập staff",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"ducmanhphungduc@gmail.com\",\r\n    \"password\":\"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/login/staff",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"login",
+										"staff"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Đăng nhập hotelier",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"ducmanhphungducmanh@gmail.com\",\r\n    \"password\":\"63866\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/login/hotelier",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"login",
+										"hotelier"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "đăng kí",
+					"item": [
+						{
+							"name": "tạo tài khoản khách hàng",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Phùng\",\r\n    \"lastName\":\"Đức Mạnh\",\r\n    \"email\":\"ducmanhphungducmanh@gmail.com\",\r\n    \"password\":\"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/register",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "tạo tài khoản staff",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAxNCwiaWF0IjoxNzE0MDIwMjg4LCJleHAiOjE3MTQxMDY2ODh9.QTZqcfVA78hV_GGJby-9l-QP1niOzBvBmvg_NjAJ4s4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\" :\"Phùng\",\r\n    \"lastName\" : \"Đức Mạnh\",\r\n    \"email\":\"kimyoki99@gmail.com\",\r\n    \"password\":\"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/create/staff",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"create",
+										"staff"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Đăng kí làm hotelier",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAxMywiaWF0IjoxNzE0MDI0OTkzLCJleHAiOjE3MTQxMTEzOTN9.LyE9yPodKXO7TJMeTEVPx_aTumiMA-kfso3sx1j4fy4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/user/register/hotelier",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"register",
+										"hotelier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "kích hoạt tài khoản",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"29844\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/active-account/1013",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"active-account",
+										"1013"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resend mã kích hoạt tài khoản",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/user/send-activation-code/1013",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"send-activation-code",
+										"1013"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gửi mã reset mật khẩu khi người dùng quên mật khẩu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user/forgot-password/1013",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"forgot-password",
+								"1013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset mật khẩu với mã đổi mật khẩu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"39207\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/forgot-password-2/1013",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"forgot-password-2",
+								"1013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lấy thông tin user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAxMywiaWF0IjoxNzE0MDI0OTkzLCJleHAiOjE3MTQxMTEzOTN9.LyE9yPodKXO7TJMeTEVPx_aTumiMA-kfso3sx1j4fy4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/user-info/1013",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"user-info",
+								"1013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lấy thông tin all user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user/user-info",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"user-info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Block tài khoản user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAxNCwiaWF0IjoxNzE0MDIxMzQ0LCJleHAiOjE3MTQxMDc3NDR9.oranHM5CREdcFwDvH7ThypPPKAUdd2gaDeLdraX7UbQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/block-user/1013",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"block-user",
+								"1013"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
