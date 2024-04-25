@@ -1,0 +1,1 @@
+docker run -d --name user_management_service -v .:/server -p 3000:3000 user_management_service

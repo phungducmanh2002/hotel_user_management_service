@@ -1,0 +1,36 @@
+{
+  "name": "user_management_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "mssql": "^10.0.2",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.0",
+    "sequelize": "^6.37.2"
+  },
+  "_moduleAliases": {
+    "@src": "./src",
+    "@routersV1": "src/api/v1/routers/v1",
+    "@componentsV1": "src/api/v1/components",
+    "@helpersV1": "src/api/v1/helpers",
+    "@interfacesV1": "src/api/v1/interfaces",
+    "@logsV1": "src/api/v1/logs",
+    "@middlewaresV1": "src/api/v1/middlewares",
+    "@configs": "src/configs",
+    "@constanceV1": "src/configs"
+  }
+}
